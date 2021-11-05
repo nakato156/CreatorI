@@ -1,0 +1,49 @@
+<title>{{titulo}}</title>
+{% extends "index.html" %}
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/video.css')}}">
+{% endblock %}
+{% block content %}
+<section class="PanelVideos" id="PanelVideos">
+    <section class="video_and_info">
+        <div class="player" id="player">
+            <div class="video">
+                <div id="protected" class="protect">
+                </div>
+                <div id="controls" class="controls">
+                    <div id="progessbar" class="hp_slide">
+                        <div class="hp_range"></div>
+                    </div>
+                    <div style="background: none;">
+                        <i id="playStop" class='bx bx-play'></i>
+                        <i id="icon_vol" class='bx bxs-volume' ></i>
+                        <input id="volumen" type="range" value="100">
+                        <p id="timer" style="display: inline-flex;">0/0</p>
+                    </div>
+                </div>
+                <video id="video" width="700px" src="{{url_for('static', filename='videos/'+url+'.mp4')}}" preload></video>
+            </div>
+            <div class="opt_video">
+                <p>{{ titulo }}</p>
+                <div>
+                    <i class='bx bx-like'></i>
+                    <i class='bx bx-dislike' ></i>
+                    <i class='bx bx-share-alt' ></i>
+                </div>
+            </div>
+        </div>      
+        <div class="info_channel">
+            <img src="{{url_for('static', filename='perfil/'+photo)}}" alt="">
+            <p>{{ name }}</p>
+        </div>
+    </section>
+    <section class="recommend" id="recommend">
+        <div class="preloader"></div>
+    </section>
+</section>
+</body>
+<script type="module" src="{{url_for('static', filename='js/shortcut.js')}}"></script>
+<script type="module" src="{{url_for('static', filename='js/video.js')}}"></script>
+<script type="module" src="{{url_for('static', filename='js/class/bar.js')}}"></script>
+<script type="module" src="{{url_for('static', filename='js/class/observer.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,5 @@
+.env
+envi
+dist.browser
+__pycache__
+recomendacion.py

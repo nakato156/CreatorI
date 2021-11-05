@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir nuevo video</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/upload.css')}}">
+</head>
+<body>
+    <section class="upload_video">
+        <form id="form_video" class="formulario">
+            <section class="info_video">
+                <label>Titulo del video</label>
+                <input name="titulo" type="text">
+                <label>Descripción</label>
+                <input name="descripcion" type="text">
+                <label>Tags</label>
+                <input name="tags" type="text">
+            </section>
+            <section class="video">
+                <label>Video</label>
+                <input name="contenido" type="file" enctype=multipart/form-data>
+            </section>
+            <button>Subir</button>
+        </form>
+    </section>
+</body>
+<script src="{{url_for('static', filename='js/upload.js')}}"></script>
+</html>

@@ -1,0 +1,30 @@
+<section class="bar_settings">
+    <div class="logo">
+        <h3>InventorI</h3>
+    </div>
+    <div class="busqueda">
+        <form id="Formsearch">
+            <div class="query_search">
+                <input id="querySearch" type="text" 
+                    autocapitalize="none" 
+                    autocomplete="off" 
+                    autocorrect="off"
+                    placeholder="Buscar"
+                    style="outline: currentcolor;">
+                <i class='bx bx-search' id="search"></i>
+            </div>
+        </form>
+    </div>
+    <div class="info_user">
+        <ul>
+            <li>
+                <img id="main_perfil" src="{{url_for('static', filename='perfil/'+perfil)}}" alt="perfil">
+            </li>
+            <ul class="more_actions" style="display: none;">
+                <li><a href="/out">Cerrar sesion</a></li>
+                <li><a href="/perfil">Inventar</a></li>
+                <li>Configuración</li>
+            </ul>
+        </ul>
+    </div>
+</section>

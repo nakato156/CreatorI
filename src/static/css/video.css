@@ -1,0 +1,240 @@
+/*panel the video*/
+.PanelVideos{
+    padding: 20px 0;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+/*Video*/
+.protect{
+    background: none;
+    position: absolute; 
+    width: 100%;
+    height: 78%;
+    z-index: 100;
+}
+.video_and_info{
+    display: block;
+    height: auto;
+    max-height: 450px;
+}
+.player{
+    position: relative;
+    background: transparent;
+    width: 700px;
+    padding: 5px;
+    z-index: 0;
+}
+.video{
+    position: absolute;
+    z-index: -2;
+}
+
+/*controls*/
+.controls{
+    background: none;
+    position: absolute;
+    display: none;
+    bottom: -20px;
+    width: 100%;
+    padding: 10px 0;
+    height: auto;
+    max-height: 12%;
+}
+.controls>button{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+.hp_slide{
+    width:100%;
+    background: #9c9b9b;
+    height: auto;
+}
+.hp_range{
+    background:#074e9e;
+    height: 5px;
+    width: 0;
+    max-width: 100%;
+}
+
+.bx{
+    background: transparent;
+    font-size: 30px;
+    margin: auto;
+    color: #074e9e;
+}
+.bxs-volume{
+    font-size: 25px;
+}
+.controls i{
+    cursor: pointer;
+}
+/*barra de volume*/
+#volumen{
+    display: none;
+}
+
+input[type='range'] {
+    display: block;
+    background: transparent;
+    width: 55px;
+}
+  
+input[type='range']:focus {
+    outline: none;
+}
+  
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    background-color: var(--principal);
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--principal);
+    border-radius: 50%;
+    margin-top: -9px;
+}
+  
+input[type=range]::-moz-range-thumb {
+    background-color: var(--principal);
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--principal);
+    border-radius: 50%;
+}
+  
+input[type=range]::-ms-thumb {
+    background-color: var(--principal);
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--principal);
+    border-radius: 50%;
+}
+  
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: var(--principal);
+    height: 3px;
+}
+  
+input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+}
+  
+input[type=range]::-moz-range-track {
+    background-color: var(--principal);
+    height: 3px;
+}
+  
+input[type=range]::-ms-track {
+    background-color: var(--principal);
+    height: 3px;
+}
+  
+input[type=range]::-ms-fill-lower {
+    background-color: HotPink
+}
+  
+input[type=range]::-ms-fill-upper {
+    background-color: black;
+} 
+
+.show_bar_volume{
+    display: block;
+}
+.opt_video{
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    bottom: 0;
+    max-height: 53px;
+    width: 95%;
+}
+.opt_video>p{
+    color: #000;
+    width: 90%;
+}
+.opt_video>div{
+    margin: auto;
+}
+.opt_video>div i{
+    cursor: pointer;
+    margin: 0 20px;
+}
+/*info video*/
+.info_channel{
+    display: inline-flex;
+}
+.info_channel>img{
+    width: 45px;
+    height: 45px;
+}
+.info_channel>p{
+    margin: auto;
+    margin-left: 10px;
+}
+
+/*Results Search*/
+.PanelResults{
+    flex-wrap: wrap;
+}
+.result-search>img{
+    width: 310px;
+    height: 180px;
+    margin-right: 10px;
+}
+.result-search{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+/*videos recomendados*/
+.recommend_video{
+    display: flex;
+    padding: 10px;
+    width: 340px;
+    height: 150px;
+    margin-bottom: 7px;
+}
+.recommend_video>video{
+    width:170px;
+    height: 100px;
+    margin-right: 7px;
+}
+/*hovers*/
+.up_controls{
+    display: block;
+    bottom: 0;
+}
+
+/*pre-loaders*/
+.preloader {
+    width: 40px;
+    height: 40px;
+    border: 3px transparent;
+    border-top: 3px solid #000;
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*animaciones*/
+@keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}

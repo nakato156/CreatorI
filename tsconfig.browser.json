@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "./src/static/js",
+      "target": "ES2017",
+      "module": "ESnext",
+      "moduleResolution": "node",
+      "lib": ["es2016", "dom", "es5"]
+    },
+    "include": [
+      "./src/**/*"
+    ]
+}

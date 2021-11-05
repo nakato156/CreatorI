@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+</head>
+<body>
+    <section class="formulario">
+        <form id="formi">
+            <div class="title">
+                <h2>Saliste?</h2>
+            </div>
+            <label>Nombres</label>
+            <input name="names" type="text">
+            <label>Contraseña</label>
+            <input name="password" type="password" id="password">
+            <div class="show_password">
+                <p>Mostrar contraseña</p><input type="checkbox" id="view_pass">
+            </div>
+            <button>Enviar</button>
+            <p><a href="/register">Registrate</a></p>
+        </form>
+    </section>
+</body>
+<script type="module" src="{{url_for('static', filename='js/login.js')}}"></script>
+</html>

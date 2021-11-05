@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+{% endblock %}
+{% block content %}
+<section class="principal">
+    <div class="discover">
+
+    </div>
+    <div class="videos">
+        {% for video in videos %}
+            <div class="video">
+                <img onclick="visit('{{video.url}}')" src="{{url_for('static', filename='previews/'+video.url+'.png')}}"></video>
+                <div class="infoVideo_minature">
+                    <img src="{{url_for('static', filename='perfil/'+video.logo)}}" alt="inventori_{{video.user_name}}">
+                    <div class="add_info title_video" >
+                        <p>{{ video["titulo"] }}</p>
+                        <p style="color: darkgrey; height: 15px;">{{ video.user_name }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="images">
+        {% for img in images %}
+        <div class="image">
+            <img src="{{url_for('static', filename='previews/'+img.url+'.png')}}"></video>
+            <div class="infoImg_minature">
+                <img src="{{url_for('static', filename='perfil/'+img.logo)}}" alt="inventori_{{img.user_name}}">
+                <p>{{ img["titulo"] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section> 
+</body>
+{% endblock %}
